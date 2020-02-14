@@ -16,7 +16,7 @@ public class Employer extends AbstractEntity {
     private String location;
 
     @OneToMany(mappedBy = "employer")
-    private final List<Job> jobs = new ArrayList<>(); //does it need to be final??
+    private List<Job> jobs = new ArrayList<>(); //does it need to be final??
 
     public Employer(String location) {
         this.location = location;
@@ -34,7 +34,12 @@ public class Employer extends AbstractEntity {
         this.location = location;
     }
 
-//    public List<Job> getJobs() {
-//        return jobs;
-//    }
+    //Not sure if jobs needs getters AND setters
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
+    }
 }
