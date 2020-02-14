@@ -25,6 +25,15 @@ public class Job extends AbstractEntity{
 
     // Getters and setters.
 
+
+    @Override
+    public String toString() {
+        return "Job{" +
+                "employer=" + employer +
+                ", skills=" + skills +
+                '}';
+    }
+
     public Employer getEmployer() {
         return employer;
     }
